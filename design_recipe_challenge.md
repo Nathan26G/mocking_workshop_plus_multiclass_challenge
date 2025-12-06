@@ -127,3 +127,7 @@ class Coach:
         #   Calls student.add_submission(submission) on every student the coach manages. (Delegation)
         pass
 ```
+## 3. Test Examples
+```python
+
+```
