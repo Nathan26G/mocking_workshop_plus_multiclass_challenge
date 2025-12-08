@@ -257,6 +257,30 @@ def test_returns_error_message_when_no_students():
 
 test_intergration_student_coach.py
 
+def test_return_count_after_adding_a_student_with_no_submissions():
+  # initalise the class
+  # add a student (without submisions)
+  # run the count_submission func
+  # assert that count is correct
+
+def test_return_count_after_adding_a_student():
+  # initalise the class
+  # add a student (with submisions)
+  # run the count_submission func
+  # assert that count is correct
+
+def test_return_count_after_adding_multiple_students():
+  # initalise the class
+  # add multiple students (with submisionss)
+  # run the count_submission func
+  # assert that count is correct
+
+def test_return_count_after_adding_a_student_with_multiple_submissions():
+  # initalise the class
+  # add a student (with submisions)
+  # run the count_submission func
+  # assert that count is correct
+
 def test_return_empty_submission_list_of_student():
   # return the submission lists, combined of all students
   # assert that list is empty 
