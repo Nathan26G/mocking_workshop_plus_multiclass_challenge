@@ -146,4 +146,39 @@ class Coach:
 ## 3. Test Examples
 ```python
 
+test_student.py
+
+def test_return_empty_list_after_being_initialised():
+  #initalise the class
+  #then return the list
+  #assert that list is empty 
+
+def test_return_list_after_adding_a_submission():
+  #initalise the class
+  # add a submission 
+  #then return the list
+  #assert that list has submission
+
+def test_return_list_after_adding_multiple_submissios():
+  #initalise the class
+  # add multiple submissions 
+  #then return the list
+  #assert that list has submissions
+
+def test_return_count_before_submissions():
+  # initalise the class
+  # run the count_submission func
+  # assert that count is correct
+
+def test_return_count_after_adding_a_submission():
+  # initalise the class
+  # add a submission 
+  # run the count_submission func
+  # assert that count is correct
+
+def test_return_count_after_adding_multiple_submissios():
+  # initalise the class
+  # add multiple submissions 
+  # run the count_submission func
+  # assert that count is correct
 ```
