@@ -181,4 +181,81 @@ def test_return_count_after_adding_multiple_submissios():
   # add multiple submissions 
   # run the count_submission func
   # assert that count is correct
+
+
+test_coach.py
+
+def test_return_empty_list_after_being_initialised():
+    #initalise the class
+    #then return the list
+    #assert that list is empty 
+
+def test_return_list_after_adding_a_student():
+  #initalise the class
+  # add a student 
+  #then return the list
+  #assert that list has student
+
+def test_return_list_after_adding_multiple_students():
+  #initalise the class
+  # add multiple students 
+  #then return the list
+  #assert that list has students
+
+def test_return_count_without_students():
+  # initalise the class
+  # run the count_submission func
+  # assert that count is correct
+
+def test_return_count_after_adding_a_student_with_no_submissions():
+  # initalise the class
+  # add a student (without submisions)
+  # run the count_submission func
+  # assert that count is correct
+
+def test_return_count_after_adding_a_student():
+  # initalise the class
+  # add a student (with submisions)
+  # run the count_submission func
+  # assert that count is correct
+
+def test_return_count_after_adding_multiple_students():
+  # initalise the class
+  # add multiple students (with submisionss)
+  # run the count_submission func
+  # assert that count is correct
+
+def test_returns_student_name_as_a_string():
+    # initalise the class
+    # add one student
+    # run the print_student_names func
+    # assert the string is returned correctly
+
+def test_returns_students_names_as_a_string():
+    # initalise the class
+    # add multiple students
+    # run the print_student_names func
+    # assert the string is returned correctly
+
+def test_returns_error_message_when_no_students():
+    # initalise the class
+    # run the print_student_names func
+    # assert the error message is returned correctly
+
+def test_return_empty_submission_list_of_student():
+  # get the empty submision list of a student
+  # return the list
+  # assert that list is empty 
+
+def test_return_submission_list_of_student_after_adding_a_submission():
+  # add a submission to a students list
+  # get the list from student
+  # return the list
+  # assert that list has the submission
+
+def test_return_submission_list_of_student_after_adding_multiple_submissions():
+  # add multiple submissions to a students list
+  # get the list from student
+  # return the list
+  # assert that list has the submissions 
 ```
