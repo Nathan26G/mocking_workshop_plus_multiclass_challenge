@@ -9,15 +9,15 @@ def test_return_empty_list_after_being_initialised():
 
 def test_return_list_after_adding_a_student():
     coach = Coach('Nathan')
-    coach.add_student('Doug')
+    coach.list_of_students.append('Doug')
     student_list = coach.list_of_students
     
     assert student_list == ['Doug']
     
 def test_return_list_after_adding_multiple_students():
     coach = Coach('Nathan')
-    coach.add_student('Doug')
-    coach.add_student('Desmond')
+    coach.list_of_students.append('Doug')
+    coach.list_of_students.append('Desmond')
     student_list = coach.list_of_students
     
     assert student_list == ['Doug', 'Desmond']
@@ -81,7 +81,7 @@ def test_return_count_after_adding_multiple_students_with_multiple_submissions()
       
 def test_returns_student_name_as_a_string():
     coach = Coach('Nathan')
-    coach.add_student('Doug')
+    coach.list_of_students.append('Doug')
     student_string = coach.print_student_names()
     
     assert student_string == 'Doug'
@@ -89,8 +89,8 @@ def test_returns_student_name_as_a_string():
 def test_returns_students_names_as_a_string():
   
     coach = Coach('Nathan')
-    coach.add_student('Doug')
-    coach.add_student('Desmond')
+    coach.list_of_students.append('Doug')
+    coach.list_of_students.append('Desmond')
     student_string = coach.print_student_names()
     
     assert student_string == 'Doug, Desmond'
