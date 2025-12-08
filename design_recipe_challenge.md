@@ -19,18 +19,18 @@ As a **Student**, I need to be able to:
 The `Coach` class **has a list of** `Student` objects (composition/aggregation), where the `Coach` delegates the submission counting and submission adding tasks to the `Student` objects.
 
 ```
-┌────────────────────────────--------┐
-│ Coach(name)                        │
-│                                    │
-│ - self.name                        │
-│ - self.students                    │
-│ - add_student(student)             │
-│ - count_submissions()              │
-│   => total submission count        │
-│ - print_student_names()            │
-│   => "Xiao, Rodrigo, Janna"        │
-│ - upload_submission_for_students() │
-└───────────┬────────────────--------┘
+┌─────────────────────────────────────────────────┐
+│ Coach(name)                                     │
+│                                                 │
+│ - self.name                                     │
+│ - self.students                                 │
+│ - add_student(student)                          │
+│ - count_submissions()                           │
+│   => total submission count                     │
+│ - print_student_names()                         │
+│   => "Xiao, Rodrigo, Janna"                     │
+│ - upload_submission_for_students('tdd-a-class') │
+└───────────┬─────────────────────────────────────┘
             │
             │ owns a list of
             ▼
@@ -53,6 +53,8 @@ class Student:
     def __init__(self, name):
         # Parameters:
         #   name: string
+        # Returns:
+        #   None
         # Side-effects:
         #   None
         # Notes:
@@ -66,6 +68,8 @@ class Student:
         #   None
         # Side-effects:
         #   Adds the submission to the submissions list
+        # Nones:
+        #   None
         pass
 
     def count_submissions(self):
@@ -74,7 +78,9 @@ class Student:
         # Returns:
         #   The integer count of all submissions made by the student.
         # Side-effects:
-        #   None:
+        #   None
+        # Notes:
+        #   None
         pass
 
 class Coach:
@@ -85,6 +91,8 @@ class Coach:
     def __init__(self, name):
         # Parameters:
         #   name: string
+        # Returns:
+        #   None
         # Side-effects:
         #   None
         # Notes:
@@ -98,6 +106,8 @@ class Coach:
         #   None
         # Side-effects:
         #   Adds the student to the students property
+        # Notes:
+        #   None
         pass
 
     def count_submissions(self):
@@ -106,6 +116,8 @@ class Coach:
         # Returns:
         #   The integer sum of submissions from all students the coach manages. (Delegation)
         # Side-effects:
+        #   None
+        # Notes:
         #   None
         pass
 
@@ -116,6 +128,8 @@ class Coach:
         #   A string of all student names, separated by ", "
         # Side-effects:
         #   None
+        # Notes:
+        #   None
         pass
     
     def upload_submission_for_students(self, submission):
@@ -125,6 +139,8 @@ class Coach:
         #   None
         # Side-effects:
         #   Calls student.add_submission(submission) on every student the coach manages. (Delegation)
+        # Notes:
+        #   None
         pass
 ```
 ## 3. Test Examples
