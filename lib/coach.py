@@ -16,9 +16,7 @@ class Coach:
         return len(self.list_of_student_submissions)
       
     def print_student_names(self):
-        if len(self.list_of_students) == 1:
-            return self.list_of_students[0].name
-        if len(self.list_of_students) > 1:
+        if len(self.list_of_students) > 0:
             list_of_students_names = []
             for student in self.list_of_students:
               list_of_students_names.append(student.name)
