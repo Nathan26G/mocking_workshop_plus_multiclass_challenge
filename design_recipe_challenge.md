@@ -257,6 +257,40 @@ def test_returns_error_message_when_no_students():
 
 test_intergration_student_coach.py
 
+def test_return_empty_list_after_being_initialised():
+    #initalise the class
+    #then return the student list
+    #assert that list is empty 
+
+def test_return_list_len_after_adding_a_student():
+  #initalise the class
+  # add a student 
+  #then return the len of student list
+  #assert that list len is 1
+
+def test_return_list_len_after_adding_multiple_students():
+  #initalise the class
+  # add multiple students 
+  #then return the len of student list
+  #assert that list len has amount students
+
+def test_returns_student_name_as_a_string():
+    # initalise the class
+    # add one student
+    # run the print_student_names func
+    # assert the string is returned correctly
+
+def test_returns_students_names_as_a_string():
+    # initalise the class
+    # add multiple students
+    # run the print_student_names func
+    # assert the string is returned correctly
+
+def test_returns_error_message_when_no_students():
+    # initalise the class
+    # run the print_student_names func
+    # assert the error message is returned correctly
+
 def test_return_count_after_adding_a_student_with_no_submissions():
   # initalise the class
   # add a student (without submisions)
