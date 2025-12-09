@@ -112,5 +112,3 @@ def test_returns_error_message_when_no_students():
     student_string = coach.print_student_names()
     
     assert student_string == 'No students'
-    
-# I couldn't think of a way of checking the upload_submission_for_students function using mock
