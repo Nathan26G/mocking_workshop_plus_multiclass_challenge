@@ -22,3 +22,7 @@ class Coach:
         if len(self.list_of_students) > 1:
             return ', '.join(self.list_of_students)
         return 'No students'
+
+    def upload_submission_for_students(self, submission):
+        for student in self.list_of_students:
+            student.add_submission(submission)
