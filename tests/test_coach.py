@@ -3,24 +3,30 @@ from unittest.mock import Mock
 
 def test_return_empty_list_after_being_initialised():
     coach = Coach('Nathan')
-    student_list = coach.list_of_students
+    student_len = len(coach.list_of_students)
     
-    assert student_list == []
+    assert student_len == 0
 
-def test_return_list_after_adding_a_student():
+def test_return_list_len_after_adding_a_student():
     coach = Coach('Nathan')
-    coach.list_of_students.append('Doug')
-    student_list = coach.list_of_students
+    Doug = Mock()
+    Doug.name = 'Doug'
+    coach.add_student(Doug)
+    student_len = len(coach.list_of_students)
     
-    assert student_list == ['Doug']
+    assert student_len == 1
     
-def test_return_list_after_adding_multiple_students():
+def test_return_list_len_after_adding_multiple_students():
     coach = Coach('Nathan')
-    coach.list_of_students.append('Doug')
-    coach.list_of_students.append('Desmond')
-    student_list = coach.list_of_students
+    Doug = Mock()
+    Doug.name = 'Doug'
+    coach.add_student(Doug)
+    Desmond = Mock()
+    Desmond.name = 'Desmond'
+    coach.add_student(Desmond)
+    student_len = len(coach.list_of_students)
     
-    assert student_list == ['Doug', 'Desmond']
+    assert student_len == 2
 
 def test_return_count_without_students():
        coach = Coach('Nathan')
@@ -81,7 +87,9 @@ def test_return_count_after_adding_multiple_students_with_multiple_submissions()
       
 def test_returns_student_name_as_a_string():
     coach = Coach('Nathan')
-    coach.list_of_students.append('Doug')
+    Doug = Mock()
+    Doug.name = 'Doug'
+    coach.add_student(Doug)
     student_string = coach.print_student_names()
     
     assert student_string == 'Doug'
@@ -89,8 +97,12 @@ def test_returns_student_name_as_a_string():
 def test_returns_students_names_as_a_string():
   
     coach = Coach('Nathan')
-    coach.list_of_students.append('Doug')
-    coach.list_of_students.append('Desmond')
+    Doug = Mock()
+    Doug.name = 'Doug'
+    coach.add_student(Doug)
+    Desmond = Mock()
+    Desmond.name = 'Desmond'
+    coach.add_student(Desmond)
     student_string = coach.print_student_names()
     
     assert student_string == 'Doug, Desmond'

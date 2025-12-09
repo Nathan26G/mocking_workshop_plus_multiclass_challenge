@@ -1,6 +1,30 @@
 from lib.student import Student
 from lib.coach import Coach
 
+def test_return_empty_list_after_being_initialised():
+    coach = Coach('Nathan')
+    student_len = len(coach.list_of_students)
+    
+    assert student_len == 0
+
+def test_return_list_len_after_adding_a_student():
+    coach = Coach('Nathan')
+    Doug = Student('Doug')
+    coach.add_student(Doug)
+    student_len = len(coach.list_of_students)
+    
+    assert student_len == 1
+    
+def test_return_list_len_after_adding_multiple_students():
+    coach = Coach('Nathan')
+    Doug = Student('Doug')
+    coach.add_student(Doug)
+    Desmond = Student('Desmond')
+    coach.add_student(Desmond)
+    student_len = len(coach.list_of_students)
+    
+    assert student_len == 2
+
 def test_return_count_after_adding_a_student_with_no_submissions():
       coach = Coach('Nathan')
       student = Student('Fergus')
@@ -53,6 +77,31 @@ def test_return_count_after_adding_multiple_students_with_multiple_submissions()
       count = coach.count_submissions()
       
       assert count == 4
+
+def test_returns_student_name_as_a_string():
+    coach = Coach('Nathan')
+    Doug = Student('Doug')
+    coach.add_student(Doug)
+    student_string = coach.print_student_names()
+    
+    assert student_string == 'Doug'
+
+def test_returns_students_names_as_a_string():
+  
+    coach = Coach('Nathan')
+    Doug = Student('Doug')
+    coach.add_student(Doug)
+    Desmond = Student('Desmond')
+    coach.add_student(Desmond)
+    student_string = coach.print_student_names()
+    
+    assert student_string == 'Doug, Desmond'
+    
+def test_returns_error_message_when_no_students():
+    coach = Coach('Nathan')
+    student_string = coach.print_student_names()
+    
+    assert student_string == 'No students'
       
 def test_return_empty_submission_list_of_student():
     coach = Coach('Nathan')
@@ -69,4 +118,4 @@ def test_return_submission_list_of_student_after_adding_a_submission():
     coach.upload_submission_for_students('submission')
     list = Fergus.list_of_submissions
     
-    assert coach.list_of_students == ['submission'] 
+    assert list == ['submission'] 

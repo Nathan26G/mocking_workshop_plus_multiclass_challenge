@@ -190,17 +190,17 @@ def test_return_empty_list_after_being_initialised():
     #then return the student list
     #assert that list is empty 
 
-def test_return_list_after_adding_a_student():
+def test_return_list_len_after_adding_a_student():
   #initalise the class
   # add a student 
-  #then return the student list
-  #assert that list has student
+  #then return the len of student list
+  #assert that list len is 1
 
-def test_return_list_after_adding_multiple_students():
+def test_return_list_len_after_adding_multiple_students():
   #initalise the class
   # add multiple students 
-  #then return the student list
-  #assert that list has students
+  #then return the len of student list
+  #assert that list len has amount students
 
 def test_return_count_without_students():
   # initalise the class

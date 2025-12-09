@@ -7,8 +7,7 @@ class Coach:
         self.list_of_student_submissions = []
         
     def add_student(self, student):
-        student = Student(student)
-        self.list_of_students.append(student.name)
+        self.list_of_students.append(student)
     
     def count_submissions(self):
         for student in self.list_of_students:
@@ -18,9 +17,12 @@ class Coach:
       
     def print_student_names(self):
         if len(self.list_of_students) == 1:
-            return self.list_of_students[0]
+            return self.list_of_students[0].name
         if len(self.list_of_students) > 1:
-            return ', '.join(self.list_of_students)
+            list_of_students_names = []
+            for student in self.list_of_students:
+              list_of_students_names.append(student.name)
+            return ', '.join(list_of_students_names)
         return 'No students'
 
     def upload_submission_for_students(self, submission):
