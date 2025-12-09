@@ -119,3 +119,13 @@ def test_return_submission_list_of_student_after_adding_a_submission():
     list = Fergus.list_of_submissions
     
     assert list == ['submission'] 
+    
+def test_return_submission_list_of_student_after_adding_multiple_submissions():
+    coach = Coach('Nathan')
+    Fergus = Student('Fergus')
+    coach.add_student(Fergus)
+    coach.upload_submission_for_students('submission')
+    coach.upload_submission_for_students('submission2')
+    list = Fergus.list_of_submissions
+    
+    assert list == ['submission', 'submission2'] 
